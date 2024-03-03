@@ -7,73 +7,84 @@
     tools:context=".MainActivity">
 
     <!-- 第一個數字輸入框 -->
+
+    <!-- 第二個數字輸入框 -->
     <EditText
         android:id="@+id/number1EditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter number 1"
+        android:layout_marginTop="16dp"
+        android:hint="number 1"
         android:inputType="number"
         android:textSize="34sp"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- 第二個數字輸入框 -->
+    <!-- 加法按鈕 -->
+
+    <!-- 減法按鈕 -->
     <EditText
         android:id="@+id/number2EditText"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:hint="Enter number 2"
+        android:hint="number 2"
         android:inputType="number"
         android:textSize="34sp"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/number1EditText" />
 
-    <!-- 加法按鈕 -->
     <Button
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/number2EditText" />
 
-    <!-- 減法按鈕 -->
+    <!-- 乘法按鈕 -->
     <Button
         android:id="@+id/subtractButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="-"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.229"
         app:layout_constraintLeft_toRightOf="@id/addButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/addButton" />
 
-    <!-- 乘法按鈕 -->
+    <!-- 除法按鈕 -->
     <Button
         android:id="@+id/multiplyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.399"
         app:layout_constraintLeft_toRightOf="@id/subtractButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/subtractButton" />
 
-    <!-- 除法按鈕 -->
     <Button
         android:id="@+id/divideButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="/"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.591"
         app:layout_constraintLeft_toRightOf="@id/multiplyButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/multiplyButton" />
+
+    <!-- 新增清除按鈕 -->
+
+    <!-- 結果顯示 -->
 
     <Button
         android:id="@+id/equalButton"
@@ -81,20 +92,33 @@
         android:layout_height="wrap_content"
         android:text="="
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
         app:layout_constraintLeft_toRightOf="@id/divideButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divideButton" />
 
-    <!-- 結果顯示 -->
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/equalButton" />
+
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:hint="Result"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:hint="結果"
         android:textSize="34sp"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/equalButton" />
+        app:layout_constraintStart_toEndOf="@+id/number2EditText"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

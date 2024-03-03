@@ -26,9 +26,10 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.subtractButton).setOnClickListener(v -> chosenOperator = '-');
         findViewById(R.id.multiplyButton).setOnClickListener(v -> chosenOperator = '*');
         findViewById(R.id.divideButton).setOnClickListener(v -> chosenOperator = '/');
-
         // 為等於按鈕設置監聽器，進行計算
         findViewById(R.id.equalButton).setOnClickListener(v -> calculate(chosenOperator));
+        // 為清除按鈕設置監聽器
+        findViewById(R.id.clearButton).setOnClickListener(v -> clearInputs());
     }
 
     private void calculate(char operator) {
@@ -55,7 +56,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // 顯示計算結果
-        resultTextView.setText("Result: " + result);
+        resultTextView.setText("結果: " + result);
+    }
+
+    private void clearInputs() {
+        // 清除輸入框和結果顯示
+        number1EditText.setText("");
+        number2EditText.setText("");
+        resultTextView.setText("Result");
     }
 }
 
